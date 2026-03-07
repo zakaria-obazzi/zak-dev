@@ -902,7 +902,7 @@
   </div>
 </div>
   <script>
-    const API_KEY = 'AIzaSyB0LBhQJlBhVItzSpfRQP0WZVVLtBIuIVI';
+    const API_KEY = 'AIzaSyClDwAMT5UsvcshK5UE1mmW8BoEOg6d44A';
 
 const MY_INFO = `
 You are an AI assistant for Zakaria, an AI & Emerging Technologies student in Meknès, Morocco.
@@ -939,37 +939,20 @@ async function sendMsg() {
 
 
 
-const res = curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
-  -H 'Content-Type: application/json' \
-  -H 'X-goog-api-key: AIzaSyB0LBhQJlBhVItzSpfRQP0WZVVLtBIuIVI' \
-  -X POST \
-  -d '{
-    "contents": [
-      {
-        "parts": [
-          {
-            "text": "Explain how AI works in a few words"
-          }
-        ]
-      }
-    ]
-  }'
 
 
-
-
-
+const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-latest:generateContent?key=${API_KEY}`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
 
     
-   // const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${API_KEY}`, {
-   //   method: 'POST',
-    //  headers: { 'Content-Type': 'application/json' },
-    //  body: JSON.stringify({
-    //    contents: [{
-      //    parts: [{ text: MY_INFO + '\n\nVisitor asks: ' + text }]
-    //    }]
-   //   })
-  //  });
+
+     body: JSON.stringify({
+     contents: [{
+          parts: [{ text: MY_INFO + '\n\nVisitor asks: ' + text }]
+        }]
+      })
+    });
 
     const data = await res.json();
     const reply = data.candidates[0].content.parts[0].text;
