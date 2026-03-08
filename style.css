@@ -5,11 +5,11 @@ html{scroll-behavior:smooth;}
   --bg:    #141210;
   --bg2:   #1c1916;
   --card:  rgba(255,255,255,0.03);
-  --o:     #fb923c;
-  --o2:    #fdba74;
-  --o3:    #f97316;
-  --grad:  linear-gradient(135deg,#f97316,#fb923c,#fdba74);
-  --text:  #d4c9b0;
+  --o:     #fb593c;
+  --o2:    #fd8f74;
+  --o3:    #ff3d00;
+  --grad:  linear-gradient(135deg,#f94716,#fb653c,#fd8f74);
+  --text:  #d4c1b0;
   --muted: #6b6050;
   --green: #4ade80;
   --term:  #1a1714;
@@ -368,4 +368,5 @@ footer{
   footer{padding:18px 20px;flex-direction:column;gap:6px;text-align:center;}
   .hr{margin:0 20px;}
 }
+
 
