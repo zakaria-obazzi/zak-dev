@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zak-dev</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="ring"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Zak.Dev</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- MUSIC BAR -->
+<div id="music-bar">
+  <span id="music-text">🎵 wanna hear some music while you browse?</span>
+  <button onclick="openPlayer()">[ play ]</button>
+  <button onclick="dismissBar()">[ x ]</button>
+</div>
+
+<!-- MUSIC PLAYER -->
+<div id="player">
+  <div id="song-title">🎵 playing...</div>
+  <button id="pause-btn" onclick="toggleMusic()">[ pause ]</button>
+  <button id="close-player" onclick="closePlayer()">[ stop ]</button>
+</div>
+
+<!-- YOUTUBE IFRAME (hidden) -->
+<audio id="audio" src="song.mp3" loop></audio>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="pc-canvas"></canvas>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="prompt"><span style="color:var(--o2)">zakaria</span><span>@estm</span>:~$  whoami</div>
+
+    <h1 class="h-name">Zak<span class="g">aria.</span></h1>
+
+    <div class="term-lines" id="term-lines">
+      <div class="tl"><span class="label">role</span><span class="val">AI & Data Science Student</span></div>
+      <div class="tl"><span class="label">school</span><span class="val">Ecole Supérieure de Technologie Meknès — Morocco</span></div>
+      <div class="tl"><span class="label">field</span><span class="val">Artificial Intelligence & Emerging Technologies</span></div>
+      <div class="tl"><span class="label">status</span><span class="val" style="color:var(--green)">open to opportunities ●</span></div>
+    </div>
+
+    <div class="h-btns">
+      <a href="#projects" class="btn btn-p">view_projects</a>
+      <a href="#contact" class="btn btn-o">contact_me</a>
+    </div>
+  </div>
+
+  <!-- ticker -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>//</span>Python<span>//</span>Machine Learning<span>//</span>Data Science<span>//</span>JavaScript<span>//</span>AI<span>//</span>SQL<span>//</span>NumPy<span>//</span>Pandas<span>//</span>Java<span>//</span>Linux<span>//</span>
+      <span>//</span>Python<span>//</span>Machine Learning<span>//</span>Data Science<span>//</span>JavaScript<span>//</span>AI<span>//</span>SQL<span>//</span>NumPy<span>//</span>Pandas<span>//</span>Java<span>//</span>Linux<span>//</span>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+
+    <!-- Terminal window -->
+    <div class="term-win reveal-l">
+      <div class="term-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <div class="term-title">profile.json</div>
+      </div>
+      <div class="term-body">
+        <div class="line"><span class="ps"><span class="user">zakaria</span><span class="at">@estm</span>:~$</span><span class="cmd">cat profile.json</span></div>
+        <div class="empty"></div>
+        <div class="line"><span class="out">{</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="val">"Zakaria Obazzi"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"school"</span>: <span class="val">"ESTM Meknès"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"degree"</span>: <span class="val">"AI & Emerging Tech"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="val">"Meknès, Morocco 🇲🇦"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"interests"</span>: [</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Data Science"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Machine Learning"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"Programming"</span>,</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"AI Innovation"</span></span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;],</span></div>
+        <div class="line"><span class="out">&nbsp;&nbsp;<span class="key">"available"</span>: <span style="color:var(--green)">true</span></span></div>
+        <div class="line"><span class="out">}</span></div>
+        <div class="empty"></div>
+        <div class="line"><span class="ps"><span class="user">zakaria</span><span class="at">@estm</span>:~$</span><span class="cursor-end"></span></div>
+      </div>
+    </div>
+
+    <!-- Right: bio + skills -->
+    <div class="reveal-r">
+      <div class="sec-prompt"> cat about.txt</div>
+      <div class="sec-ttl">About Me</div>
+      <p class="about-bio">
+        <span class="hi">// </span>Student at Ecole Supérieure de Technologie de Meknès, specializing in <span style="color:var(--o2)">Artificial Intelligence and Emerging Technologies</span>. Passionate about everything related to tech — with a particular focus on <span style="color:var(--o2)">programming and data science</span>. Motivated, curious, and always learning. Looking for opportunities to grow, collaborate, and build impactful projects.
+      </p>
+
+      <div class="sk-header">
+        <div class="sk-label">// skills --list</div>
+        <button class="sk-toggle" id="sk-btn" onclick="toggleSkills()">show more</button>
+      </div>
+
+      <div class="sk-grid">
+        <span class="sk">Python</span>
+        <span class="sk">HTML/CSS</span>
+        <span class="sk">JavaScript</span>
+        <span class="sk">Pandas</span>
+        <span class="sk">NumPy</span>
+        <span class="sk">Machine Learning</span>
+      </div>
+
+      <div class="sk-extra" id="sk-extra">
+        <span class="sk">Java</span>
+        <span class="sk">Data Analysis</span>
+        <span class="sk">MySQL</span>
+        <span class="sk">SQL</span>
+        <span class="sk">Linux</span>
+        <span class="sk">Excel</span>
+        <span class="sk">Microsoft Office</span>
+        <span class="sk">scikit-learn</span>
+        <span class="sk">Data Visualization</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal" style="margin-bottom:32px;">
+    <div class="sec-prompt"> ls projects/</div>
+    <div class="sec-ttl">My Projects</div>
+  </div>
+
+  <div class="proj-grid">
+    <div class="proj big reveal">
+      <div class="proj-termbar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><div class="proj-name">ai_dashboard.py</div></div>
+      <div class="proj-body">
+        <div class="p-cmd"><span>$</span> python run ai_dashboard.py --featured</div>
+        <div class="p-ttl">AI Data Analysis Dashboard</div>
+        <div class="p-desc">Processes and visualizes datasets using Python, Pandas, and NumPy. Includes ML models for trend prediction and interactive charts for real-world insights.</div>
+        <div class="p-tags"><span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">NumPy</span><span class="ptag">ML</span></div>
+        <div class="p-links"><a href="#" class="p-link"> Demo</a><a href="#" class="p-link"> GitHub</a></div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-termbar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><div class="proj-name">portfolio/index.html</div></div>
+      <div class="proj-body">
+        <div class="p-cmd"><span>$</span> open index.html</div>
+        <div class="p-ttl">Student Portfolio</div>
+        <div class="p-desc">Personal portfolio built with HTML, CSS, and JS to showcase projects and skills.</div>
+        <div class="p-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div>
+        <div class="p-links"><a href="#" class="p-link"> Live</a><a href="#" class="p-link"> GitHub</a></div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-termbar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><div class="proj-name">DBManager.java</div></div>
+      <div class="proj-body">
+        <div class="p-cmd"><span>$</span> java -jar dbmanager.jar</div>
+        <div class="p-ttl">DB Management App</div>
+        <div class="p-desc">Java application with MySQL backend for managing and querying structured data.</div>
+        <div class="p-tags"><span class="ptag">Java</span><span class="ptag">MySQL</span><span class="ptag">SQL</span></div>
+        <div class="p-links"><a href="#" class="p-link"> Demo</a><a href="#" class="p-link"> GitHub</a></div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-termbar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><div class="proj-name">classifier.py</div></div>
+      <div class="proj-body">
+        <div class="p-cmd"><span>$</span> python classifier.py --train</div>
+        <div class="p-ttl">ML Classification Model</div>
+        <div class="p-desc">Python ML project for data classification with performance evaluation and key metrics.</div>
+        <div class="p-tags"><span class="ptag">Python</span><span class="ptag">scikit-learn</span><span class="ptag">NumPy</span></div>
+        <div class="p-links"><a href="#" class="p-link"> Demo</a><a href="#" class="p-link"> GitHub</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-term reveal">
+    <div class="sec-prompt"> cat contact.txt</div>
+    <div class="sec-ttl">Get in Touch</div>
+
+    <div class="term-win" style="margin-top:28px;">
+      <div class="term-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <div class="term-title">contact.txt</div>
+      </div>
+      <div class="term-body">
+        <div class="line"><span class="ps"><span class="user">zakaria</span><span class="at">@estm</span>:~$</span><span class="cmd">cat contact.txt</span></div>
+        <div class="empty"></div>
+        <div class="c-links">
+          <a href="mailto:obazzizakaria1@gmail.com" class="c-link">
+            <span class="c-key">email</span>
+            <span>obazzizakaria1@gmail.com</span>
+          </a>
+          <a href="https://github.com/zakaria-obazzi" target="_blank" class="c-link">
+            <span class="c-key">github</span>
+            <span>github.com/zakaria-obazzi</span>
+          </a>
+          <a href="https://linkedin.com/in/zakaria-obazzi" target="_blank" class="c-link">
+            <span class="c-key">linkedin</span>
+            <span>linkedin.com/in/zakaria-obazzi    </span>
+          </a>
+          <a href="#" class="c-link">
+            <span class="c-key">location</span>
+            <span>Meknès, Morocco 🇲🇦</span>
+          </a>
+          <a href="#" class="c-link">
+            <span class="c-key">status</span>
+            <span style="color:var(--green)">open to internships & collaborations ●</span>
+          </a>
+        </div>
+        <div class="empty"></div>
+        <div class="line"><span class="ps"><span class="user">zakaria</span><span class="at">@estm</span>:~$</span><span class="cursor-end"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft"><span>zakaria@dev</span>:~$ exit 0</div>
+  <div class="ft">© 2026 <span>Zakaria Obazzi</span> · All rights reserved</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
