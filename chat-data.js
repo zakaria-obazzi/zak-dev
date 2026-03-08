@@ -9,7 +9,7 @@ window.CHAT_KB = [
 
   // core info
   {q:/internship|available/, a:"I'm looking for a one‑month internship starting summer 2026."},
-  {q:/skills|skill/, a:"Comfortable with HTML, CSS, SQL/MySQL, Merise; learning JavaScript."},
+  {q:/skills|skill/, a:"Comfortable with HTML, CSS, SQL/MySQL,python , java ; JavaScript."},
   {q:/location|where/, a:"Based in Meknès, Morocco."},
   {q:/study|school/, a:"I'm a 1st‑year AI & Emerging Tech student at ESTM Meknès."},
   {q:/name/, a:"Zakaria Obazzi (ZAK.DEV)."},
@@ -37,7 +37,7 @@ window.CHAT_KB = [
   {q:/education|degree/, a:"Studying AI & Emerging Technologies at ESTM Meknès."},
   {q:/github repo/, a:"Most of his code lives on GitHub; see his portfolio projects."},
   {q:/favorite tech/, a:"He likes Python for data work and CSS for styling."},
-  {q:/currently learning/, a:"Currently learning JavaScript and database design."},
+  {q:/currently learning/, a:"Currently learning new techs and database design."},
   {q:/available/, a:"Open to internship opportunities starting summer 2026."},
   {q:/city|where are you/, a:"Living in Meknès, Morocco."},
   {q:/nationality/, a:"He is Moroccan."},
@@ -62,5 +62,6 @@ window.getChatReply = function(text) {
   for (const pair of window.CHAT_KB) {
     if (pair.q.test(text)) return pair.a;
   }
-  return "I don't have that info yet, contact Zakaria directly!";
+  return "I don't have that info , contact Zakaria directly!";
 };
+
