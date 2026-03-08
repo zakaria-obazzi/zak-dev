@@ -312,3 +312,30 @@ function animate(){
 }
 animate();
 
+// ── CHATBOT LOGIC (keyword tracker version)
+// question/answer data lives in chat-data.js; use getChatReply(text) to obtain responses
+
+
+function toggleChat() {
+  document.getElementById('chatWindow').classList.toggle('open');
+}
+
+function sendMsg() {
+  const input = document.getElementById('chatInput');
+  const messages = document.getElementById('chatMessages');
+  let text = input.value.trim().toLowerCase();
+  if (!text) return;
+
+  messages.innerHTML += `<div class="msg user">${text}</div>`;
+  input.value = '';
+  messages.innerHTML += `<div class="msg bot typing" id="typing">Typing...</div>`;
+  messages.scrollTop = messages.scrollHeight;
+
+  setTimeout(() => {
+    document.getElementById('typing').remove();
+    const reply = window.getChatReply ? getChatReply(text) : "I don't have that info yet, contact Zakaria directly!";
+    messages.innerHTML += `<div class="msg bot">${reply}</div>`;
+    messages.scrollTop = messages.scrollHeight;
+  }, 800);
+}
+
