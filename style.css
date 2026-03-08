@@ -90,6 +90,7 @@ body{
   cursor: none; transition: color .2s; padding: 0 4px;
 }
 #close-player:hover { color: var(--o); }
+#pause-btn:hover { color: var(--o); }
 #song-info { flex: 1; }
 #song-title { font-size: .72rem; color: var(--o2); letter-spacing: 1px; }
 #song-artist { font-size: .62rem; color: var(--muted); margin-top: 2px; }
@@ -170,8 +171,15 @@ nav{
   border-bottom:1px solid var(--border);
   font-size:.72rem;letter-spacing:2px;
 }
+
 .logo{color:var(--o);text-transform:uppercase;}
 .logo::before{content:'[';} .logo::after{content:']';}
+
+.logoa{
+  color:var(--muted);text-transform:uppercase;
+  transition:color .2s;position:relative;
+  text-decoration:none;
+}
 .nav-links{display:flex;gap:28px;}
 .nav-links a{
   color:var(--muted);text-decoration:none;text-transform:uppercase;
@@ -367,6 +375,13 @@ footer{
   .proj-grid{grid-template-columns:1fr;}.proj.big{grid-column:span 1;}
   footer{padding:18px 20px;flex-direction:column;gap:6px;text-align:center;}
   .hr{margin:0 20px;}
+  
+
+
+}
+@media (max-width: 500px) {
+  .nav-links {display:none;}
+  
 }
 
 
