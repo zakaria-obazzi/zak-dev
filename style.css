@@ -171,7 +171,7 @@ nav{
   font-size:.72rem;letter-spacing:2px;
 }
 .logo{color:var(--o);text-transform:uppercase;}
-.logo::before{content:'[ ';} .logo::after{content:' ]';}
+.logo::before{content:'[';} .logo::after{content:']';}
 .nav-links{display:flex;gap:28px;}
 .nav-links a{
   color:var(--muted);text-decoration:none;text-transform:uppercase;
@@ -368,3 +368,4 @@ footer{
   footer{padding:18px 20px;flex-direction:column;gap:6px;text-align:center;}
   .hr{margin:0 20px;}
 }
+
