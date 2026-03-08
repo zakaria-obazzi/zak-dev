@@ -252,6 +252,28 @@
 
 
 
+<!-- CHATBOT (enhanced interactivity) -->
+<div class="chat-toggle" id="chatToggle" onclick="toggleChat()">💬</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div>
+      <div class="chat-name">Ask Zakaria AI</div>
+      <div class="chat-status">● Online</div>
+    </div>
+    <button onclick="toggleChat()" class="chat-close">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">Hi! I'm Zakaria's AI assistant. Ask me anything about him 👋</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask something..." onkeydown="if(event.key==='Enter') sendMsg()" />
+    <button onclick="sendMsg()">→</button>
+  </div>
+</div>
+
+<!-- data for chatbot separated into its own file -->
+<script src="chat-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
