@@ -5,9 +5,9 @@ html{scroll-behavior:smooth;}
   --bg:    #141210;
   --bg2:   #1c1916;
   --card:  rgba(255,255,255,0.03);
-  --o:     #fb593c;
-  --o2:    #fd8f74;
-  --o3:    #ff3d00;
+  --o:     #fb3c3c;
+  --o2:    #fd7d74;
+  --o3:    #ff2600;
   --grad:  linear-gradient(135deg,#f94716,#fb653c,#fd8f74);
   --text:  #d4c1b0;
   --muted: #6b6050;
