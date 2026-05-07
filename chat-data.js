@@ -30,7 +30,7 @@ window.CHAT_KB = [
   {q:/hobby|hobbies/, a:"He enjoys coding, reading tech blogs, and playing chess."},
   {q:/github/, a:"His GitHub profile is github.com/zakaria-obazzi."},
   {q:/linkedin/, a:"Connect on LinkedIn at linkedin.com/in/zakaria-obazzi."},
-  {q:/email/, a:"You can email him at obazzizakaria1@gmail.com."},
+  {q:/email/, a:"You can email him at zakaria.obazi@gmail.com."},
   {q:/phone|call/, a:"Phone number is +212 6 26 60 89 94, but email is preferred."},
   {q:/timezone/, a:"He is located in the GMT+1 timezone (Morocco)."},
   {q:/language|languages/, a:"He speaks Arabic, French, and English."},
@@ -46,14 +46,14 @@ window.CHAT_KB = [
   {q:/projects list/, a:"Check the Projects section above; placeholder links presently."},
   {q:/open source/, a:"He hopes to contribute to open-source in the future."},
   {q:/portfolio link/, a:"This site itself is his portfolio: zak-dev.html."},
-  {q:/contact me/, a:"Use the contact form or email at obazzizakaria1@gmail.com."},
+  {q:/contact me/, a:"Use the contact form or email at zakaria.obazi@gmail.com."},
   {q:/fun fact/, a:"He is a big fan of retro computing aesthetics."},
   {q:/favorite language/, a:"Python is his go-to language at the moment."},
   {q:/soon/, a:"More projects are coming soon—stay tuned!"},
   {q:/github followers/, a:"Follower count fluctuates; focus on learning instead."},
   {q:/motivation/, a:"Driven by curiosity and the desire to build things."},
   {q:/work ethic/, a:"He works hard, learns fast, and ships often."},
-  {q:/email address/, a:"obazzizakaria1@gmail.com"},
+  {q:/email address/, a:"zakaria.obazi@gmail.com"},
   {q:/intern|internship/, a:"Seeking internship positions in web dev or dbgs."}
 ];
 
@@ -62,6 +62,6 @@ window.getChatReply = function(text) {
   for (const pair of window.CHAT_KB) {
     if (pair.q.test(text)) return pair.a;
   }
-  return "I don't have that info , contact Zakaria directly!";
+  return "I don't have that info , contact Zakaria directly!  email : zakaria.obazi@gmail.com";
 };
 
