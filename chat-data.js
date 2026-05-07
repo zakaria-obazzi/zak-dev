@@ -14,7 +14,7 @@ window.CHAT_KB = [
   {q:/study|school/, a:"I'm a 1st‑year AI & Emerging Tech student at ESTM Meknès."},
   {q:/name/, a:"Zakaria Obazzi (ZAK.DEV)."},
   {q:/interested/, a:"I'm interested in web development and artificial intelligence."},
-  {q:/contact/, a:"You can reach him by email at obazzizakaria1@gmail.com or via LinkedIn/GitHub."},
+  {q:/contact/, a:"You can reach him by email at zakaria.obazi@gmail.com or via LinkedIn/GitHub."},
 
   // projects & interests
   {q:/project|portfolio/, a:"Check out the projects section of the site; live links are placeholders for now."},
