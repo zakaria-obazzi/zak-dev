@@ -1675,11 +1675,12 @@ const initFluid = () => {
 <script src="vanta.globe.min.js"></script>
 <script src="vanta.halo.min.js"></script>
 <script src="vanta.net.min.js"></script>
+<script src="vanta.clouds.min.js"></script>
 
 
 <script>
 
-const choices = ['A', 'B', 'C'];
+const choices = ['A', 'B', 'C', 'D'];
 const randomChoice = choices[Math.floor(Math.random() * choices.length)];
 
 if (randomChoice === 'A') {
@@ -1711,6 +1712,22 @@ if (randomChoice === 'A') {
       color: 0x790029,
       backgroundColor: 0x0
     })
+} else if (randomChoice === 'C') {
+      VANTA.CLOUDS({
+      el: "#globe-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      backgroundColor: 0x0,
+      skyColor: 0x0,
+      cloudColor: 0x213a58,
+      sunColor: 0x4c3c2b,
+      sunGlareColor: 0x0,
+      sunlightColor: 0x2596f9,
+      speed: 1.70
+})
 } else {
   VANTA.HALO({
     el: "#globe-bg",
