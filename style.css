@@ -51,6 +51,8 @@ body{
 
 #globe-bg{
   position:absolute;right:0;z-index:0;top:0;
+
+  opacity: 0.6;
   width: 100%;
   height:100%;
 }
