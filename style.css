@@ -36,10 +36,10 @@ body{
 }
 
 /* scanline overlay */
-#hero::before{
+/* #hero::before{
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.06) 3px,rgba(0,0,0,.06) 4px);
-}
+} */
 
 /* CANVAS for 3D PC */
 
