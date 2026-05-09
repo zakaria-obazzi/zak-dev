@@ -2,7 +2,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --bg:    #141210;
+  --bg:    #000000;
   --bg2:   #1c1916;
   --card:  rgba(255,255,255,0.03);
   --o:     #fb3c3c;
