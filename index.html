@@ -9,28 +9,9 @@
 <meta name="keywords" content="Zakaria Obazzi, AI student, data science, ESTM, Morocco, machine learning, programming">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-   <style>
-        body {
-  background-color: #000;
-  width: 100dvw;
-  min-height: 100dvh;
-  overflow-x: hidden;
-}
-
-#fluid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    z-index: 9999;     /* above everything */
-    pointer-events: none; 
-}
-    </style>
 
 </head>
 <body>
-<div id="globe-bg"></div>
 <div id="cur"></div>
 <div id="ring"></div>
 
@@ -298,27 +279,26 @@
   </div>
 </div>
 
-<!-- FLUID SIMULATION -->
- 
+
 
 <!-- data for chatbot separated into its own file -->
 <script src="chat-data.js"></script>
 <script src="script.js"></script>
 
-<canvas id="fluid"></canvas>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="fluid-ds.js"></script>
 
+<!-- FLUID SIMULATION -->
+<canvas id="fluid"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="fluid-ds.js"></script>
+
+
+<!-- VANTA.js EFFECTS -->
+<div id="globe-bg"></div>
 
 <script src="three.min.js"></script>
-<!-- <script src="vanta.globe.min.js"></script>
-<script src="vanta.halo.min.js"></script>
-<script src="vanta.net.min.js"></script> -->
-
-
 <script src="vanta.clouds.min.js"></script>
-
 <script>
    VANTA.CLOUDS({
       el: "#globe-bg",
@@ -339,73 +319,6 @@
 </script>
 
 
-
-
-<!-- <script>
-
-const choices = ['A', 'B', 'C', 'D'];
-const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-
-if (randomChoice === 'A') {
-  VANTA.NET({
-    el: "#globe-bg",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xab0000,
-    backgroundColor: 0x0,
-    points: 7.00,
-    maxDistance: 24.00,
-    spacing: 17.00
-  })
-} else if (randomChoice === 'B') {
-  VANTA.GLOBE({
-      el: "#globe-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x790029,
-      backgroundColor: 0x0
-    })
-} else if (randomChoice === 'C') {
-      VANTA.CLOUDS({
-      el: "#globe-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      backgroundColor: 0x0,
-      skyColor: 0x0,
-      cloudColor: 0x213a58,
-      sunColor: 0x4c3c2b,
-      sunGlareColor: 0x0,
-      sunlightColor: 0x2596f9,
-      speed: 1.70
-})
-} else {
-  VANTA.HALO({
-    el: "#globe-bg",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    baseColor: 0x922626,
-    backgroundColor: 0x0,
-    xOffset: 0.27
-  })
-}
-
-</script> -->
 
 </body>
 </html>
